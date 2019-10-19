@@ -1,7 +1,7 @@
 const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
 function base32encode(str) {
-  const bins = [...str].map((el) => el.charCodeAt(0).toString(2).padStart(8, '0')).join('')
+  const bins = [...str].map((el) => el.charCodeAt(0).toString(2).padStart(8, '0')).join('');
   let out = '';
   for (let i = 0; i < bins.length; i += 5) {
     let temp = bins.slice(i, i + 5);
